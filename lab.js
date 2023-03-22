@@ -30,14 +30,14 @@ let dog = {
 //////////////////////////// PROBLEM 3 ////////////////////////////
 /* Print out the name of the dog you created in problem 2 using dot-notation. */
 
-console
+console.log(dog.name);
 
 
 
 //////////////////////////// PROBLEM 4 ////////////////////////////
 /* Print out the color of the dog you created in problem 2 using bracket-notation. */
 
-//Code here
+console.log(dog[`color`]);
 
 
 
@@ -47,14 +47,22 @@ console
   Have the values to those keys be strings that are equal to your favorite thing in that category.
 */
 
-//Code here
+let favoriteThings = {
+  band: `Russ`,
+  food: `Buritos`,
+  person: `Ember`,
+  book: `fablehaven`,
+  movie: `Harry Potter`,
+  holiday: `Christmas`
+}
 
 
 /*
   After you've made your object, use bracket or dot notation to add another key named 'car' with the value being your favorite car and then another key named 'show' with the value being your favorite show.
 */
 
-//Code here
+favoriteThings.car = `Honda Civic`
+favoriteThings.show = `Anime`
 
 
 /*
@@ -62,7 +70,8 @@ console
   and change the value of the book key in your favoriteThings object to be 'Harry Potter'. (If they were either of those things already, change them to something else.)
 */
 
-//Code here
+favoriteThings.food = `Chicken Nuggets`
+favoriteThings.book = `Harry Potter`
 
 
 //////////////////////////// PROBLEM 6 ////////////////////////////
@@ -80,7 +89,7 @@ var carDetails = {
   Use object destructuring to save the property values from the object carDetails into new variables. 
 */
 
-//Code Here
+const {color, make, model, year} = carDetails
 
 
 
@@ -93,7 +102,7 @@ var carDetails = {
 */
 
 function greeting( obj ) {
-  //Code Here
+  const {firstName, lastName, title} = obj
   
   // Do not edit the code below.
   return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
@@ -112,7 +121,12 @@ function greeting( obj ) {
   Sum up the values and return the total number.
 */
 
-//Code Here
+function totalPopulation(obj){
+  const {utah, california, texas, arizona} = obj
+
+  let total = utah + california + texas + arizona
+  return total
+}
 
 
 
@@ -126,9 +140,13 @@ function greeting( obj ) {
   Push these new variables to an array and return the array. 
 */
 
-//Code Here
+function ingredients(obj){
+  const {carb, fat, protein} = obj
 
-
+  const ingredientsArr = []
+  ingArr.push(carb, fat, protein)
+  return ingredientsArr
+}
 
 //////////////////////////// PROBLEM 10 ////////////////////////////
 // Do not edit the code below.
@@ -148,7 +166,10 @@ var user = {
   Make that change without modifying the original object code above.
 */
 
-//Code Here
+user.name = `Bryan G. Smith`
+user.email = `bryan.smith@devmounta.in`
+
+console.log(user);
 
 
 //////////////////////////// PROBLEM 11 ////////////////////////////
